@@ -22,7 +22,7 @@
         </tr>
     </thead>
     <tr>
-        <td rowspan="5"><strong>프론트엔드</strong></td>
+        <td rowspan="6"><strong>프론트엔드</strong></td>
         <td>📝 언어</td>
         <td>TypeScript</td>
     </tr>
@@ -32,7 +32,7 @@
     </tr>
     <tr>
         <td>🎨 스타일링</td>
-        <td>CSS3</td>
+        <td>CSS3, Styled Components</td>
     </tr>
     <tr>
         <td>🔄 라우팅</td>
@@ -41,6 +41,10 @@
     <tr>
         <td>🔌 빌드 도구</td>
         <td>Vite</td>
+    </tr>
+    <tr>
+        <td>💅 스타일 관리</td>
+        <td>Styled Components</td>
     </tr>
     <tr>
         <td rowspan="3"><strong>개발 도구</strong></td>
@@ -62,25 +66,47 @@
 ```
 realEstateMachine_front/
 ├── assets/           # 정적 파일
-│   ├── js/          # JavaScript 파일
-│   ├── images/      # 이미지 파일
-│   └── css/         # CSS 파일
-├── components/       # 재사용 가능한 컴포넌트
-│   ├── common/      # 공통 컴포넌트
-│   └── layout/      # 레이아웃 컴포넌트
-├── state/           # 상태 관리
-│   ├── hooks/       # 커스텀 훅
-│   ├── store/       # 전역 상태
-│   └── context/     # Context API
-├── services/        # API 통신
-│   └── api/         # API 엔드포인트
-├── types/           # TypeScript 타입
-├── utils/           # 유틸리티 함수
-├── views/           # 실제 화면 파일
-├── App.tsx          # 루트 컴포넌트
-├── main.tsx         # 진입점
-└── vite-env.d.ts    # Vite 타입 정의
+│   ├── js/             # JavaScript 파일
+│   ├── images/         # 이미지 파일
+│   └── css/            # CSS 파일
+├── components/         # 재사용 가능한 컴포넌트
+│   ├── common/         # 공통 컴포넌트
+│   └── layout/         # 레이아웃 컴포넌트
+├── state/              # 상태 관리
+│   ├── hooks/          # 커스텀 훅
+│   ├── store/          # 전역 상태
+│   └── context/        # Context API
+├── services/           # API 통신
+│   └── api/            # API 엔드포인트
+├── types/              # TypeScript 타입
+├── utils/              # 유틸리티 함수
+├── views/              # 실제 화면 파일
+├── App.tsx             # 루트 컴포넌트
+├── main.tsx            # 진입점
+├── index.html          # HTML 템플릿
+├── vite.config.ts      # Vite 설정
+├── vite-env.d.ts       # Vite 타입 정의
+├── tsconfig.json       # TypeScript 기본 설정
+├── tsconfig.node.json  # Node.js용 TypeScript 설정
+├── tsconfig.app.json   # 애플리케이션용 TypeScript 설정
+├── package.json        # 프로젝트 의존성 및 스크립트
+├── package-lock.json   # 의존성 버전 잠금
+└── .gitignore          # Git 제외 파일 목록
 ```
+
+### 주요 파일 설명
+- **설정 파일**
+  - `vite.config.ts`      : Vite 빌드 도구 설정
+  - `tsconfig.json`       : TypeScript 컴파일러 설정
+  - `tsconfig.node.json`  : Node.js 환경의 TypeScript 설정
+  - `tsconfig.app.json`   : 애플리케이션 코드의 TypeScript 설정
+  - `package.json`        : 프로젝트 의존성 및 npm 스크립트 정의
+  - `.gitignore`          : Git 버전 관리에서 제외할 파일 목록
+
+- **소스 파일**
+  - `App.tsx`    : 애플리케이션의 루트 컴포넌트
+  - `main.tsx`   : 애플리케이션의 진입점
+  - `index.html` : HTML 템플릿
 
 ## 5. 🚀 설치 및 실행 방법
 <details>
