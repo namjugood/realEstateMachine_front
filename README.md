@@ -1,7 +1,11 @@
 # 🏠 부동산 실거래가 분석 시스템 (프론트엔드)
 
 ## 1. 📋 프로젝트 명
-부동산 실거래가 분석 시스템 프론트엔드 (Real Estate Transaction Analysis System Frontend)
+부동산 실거래가 분석 시스템 프론트엔드 (Real Estate Transaction Analysis System Frontend)<br><br>
+**Develpers**
+|backend|frontend|
+|:---:|:---:|
+|<img width="50" src="https://avatars.githubusercontent.com/u/80030590?s=120&v=4"/></br>[NJ Lee](https://github.com/namjugood)|<img width="50" src="https://avatars.githubusercontent.com/u/144665237?s=120&v=4"/></br>[HY Park](https://github.com/azipark)
 
 ## 2. 🎯 프로젝트 목표
 - 💻 사용자 친화적인 웹 인터페이스 구현
