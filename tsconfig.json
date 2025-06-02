@@ -19,8 +19,16 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["/*"]
-    }
+    },
+    "rootDir": ".",
   },
-  "include": ["views/Home.tsx", "views/PropertyList.tsx", "App.tsx", "main.tsx", "vite-env.d.ts", "router.tsx"],
+  "include": [
+    "views",
+    "components",
+    "App.tsx",
+    "main.tsx",
+    "vite-env.d.ts",
+    "router.tsx"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
