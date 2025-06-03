@@ -17,3 +17,77 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 } 
+
+/* 매물 목록 테이블 스타일 */
+.property-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 15px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.property-table th, .property-table td {
+  border: 1px solid #646060;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.property-table thead {
+  border: 1px solid #646060;
+  background: #f5f6fa;
+}
+.property-table th {
+  background: #f5f6fa;
+  color:  #646060;
+  font-weight: 600;
+}
+.property-table tr:nth-child(even) {
+  background: #fafbfc;
+}
+.property-table tr:hover {
+  background: #e6f7ff;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .property-table {
+    font-size: 13px;
+  }
+  .property-table th, .property-table td {
+    padding: 6px 4px;
+  }
+} 
+
+/* 페이지네이션 영역 스타일 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin: 20px 0 10px 0;
+}
+
+/* 페이지네이션 버튼 스타일 */
+.pagination button {
+  background: #f5f6fa;
+  color: #646060;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.pagination button:disabled {
+  background: #e0e0e0;
+  color: #bdbdbd;
+  cursor: not-allowed;
+}
+
+.pagination button:not(:disabled):hover {
+  background: #646060;
+  color: #fff;
+  border-color: #646060;
+}

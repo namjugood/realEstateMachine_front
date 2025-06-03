@@ -18,15 +18,25 @@
     "composite": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["/*"]
-    },
-    "rootDir": ".",
+      "@/*": ["src/*"]
+    }
   },
   "include": [
-    "views",
-    "components",
-    "App.tsx",
-    "main.tsx",
+    "src/**/*",
+    "src/assets/**/*",
+    "src/components/**/*",
+    "src/types/**/*",
+    "src/constants/**/*",
+    "src/hooks/**/*",
+    "src/pages/**/*",
+    "src/routes/**/*",
+    "src/views/**/*",
+    "src/state/**/*",
+    "src/config/**/*",
+    "src/types/**/*",
+    "src/utils/**/*",
+    "src/services/**/*",
+    "src/api/**/*",
     "vite-env.d.ts",
     "router.tsx"
   ],
