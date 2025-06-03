@@ -28,21 +28,21 @@
         </tr>
     </thead>
     <tr>
-        <td rowspan="6"><strong>프론트엔드</strong></td>
+        <td rowspan="7"><strong>프론트엔드</strong></td>
         <td>📝 언어</td>
         <td>TypeScript</td>
     </tr>
     <tr>
         <td>⚛️ 프레임워크</td>
-        <td>React 18</td>
+        <td>React 19 (ESM 환경)</td>
     </tr>
     <tr>
         <td>🎨 스타일링</td>
-        <td>CSS3, Styled Components</td>
+        <td>Tailwind CSS v4, CSS3, Styled Components</td>
     </tr>
     <tr>
         <td>🔄 라우팅</td>
-        <td>React Router v6</td>
+        <td>React Router v7</td>
     </tr>
     <tr>
         <td>🔌 빌드 도구</td>
@@ -50,7 +50,11 @@
     </tr>
     <tr>
         <td>💅 스타일 관리</td>
-        <td>Styled Components</td>
+        <td>shadcn/ui, Styled Components</td>
+    </tr>
+    <tr>
+        <td>🗃️ 상태 관리</td>
+        <td>Redux Toolkit, react-redux, Context API</td>
     </tr>
     <tr>
         <td rowspan="3"><strong>개발 도구</strong></td>
@@ -76,6 +80,7 @@
 | 날짜 | 작업 내용 | 세부 사항 |
 |------|-----------|-----------|
 | 6월 3일 | 🛠️ 기능 개선 및 구조 리팩토링 | • 매물 목록 테이블형 UI 적용<br>• 프론트엔드 페이징(페이지네이션) 기능 구현<br>• 숫자/금액 포맷 유틸 함수 추가<br>• 타입(interface) 분리 및 공통화<br>• CSS 테이블 스타일 개선<br>• 공통 유틸 함수 분리<br>• 네이버지도 api 연동동 |
+| 6월 2일 | 🏗️ 폴더 구조 리팩토링 및 환경 최신화 | • src/ 하위로 주요 파일 이동 및 통합<br>• Redux Toolkit, react-redux, shadcn/ui, Tailwind v4, PostCSS v8 환경 적용<br>• 타입/유틸/상태관리 분리 강화<br>• ESM 환경 전환<br>• 설정 파일 최신화 |
 | 5월 29일 | 🏗️ 프로젝트 초기 설정 | • ⚛️ React + TypeScript 프로젝트 생성<br>• ⚡ Vite 설정<br>• 📁 기본 디렉토리 구조 설정<br>• 🔄 기본 라우팅 설정 |
 
 
@@ -131,12 +136,15 @@ realEstateMachine_front/
 └── .gitignore                  # Git 제외 파일 목록
 ```
 
-### 주요 변경점 (2024-06-03)
+### 주요 변경점 (2024-06-02 ~ 2024-06-03)
 - `types/` 폴더 신설 및 인터페이스 분리 (ex. `AptItem`, `RegionItem` 등)
 - `utils/commonUtil.tsx`에 숫자/금액 포맷, 페이징 등 공통 함수 추가
 - 매물 목록 테이블형 UI 및 CSS 스타일 개선
 - 프론트엔드 페이지네이션(페이징) 기능 구현
 - 글로벌 CSS(`assets/css/global.css`)에 테이블/페이지네이션 스타일 추가
+- **폴더 구조 통합 및 src/ 하위로 이동**
+- **Redux Toolkit, react-redux, shadcn/ui, Tailwind v4, PostCSS v8 환경 적용**
+- **ESM 환경 전환 및 설정 파일 최신화**
 
 ## 주요 디렉토리 설명
 
