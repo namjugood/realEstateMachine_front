@@ -7,6 +7,7 @@
 |:---:|:---:|
 |<img width="50" src="https://avatars.githubusercontent.com/u/80030590?s=120&v=4"/></br>[NJ Lee](https://github.com/namjugood)|<img width="50" src="https://avatars.githubusercontent.com/u/144665237?s=120&v=4"/></br>[HY Park](https://github.com/azipark)
 
+
 ## 2. 🎯 프로젝트 목표
 - 💻 사용자 친화적인 웹 인터페이스 구현
 - 📊 실거래가 데이터의 시각화 및 통계 분석 기능 제공
