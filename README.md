@@ -122,6 +122,7 @@ realEstateMachine_front/
 │   ├── utils/                  # 공통 유틸 함수 (ex. commonUtil.tsx)
 │   ├── api/                    # API 서비스 함수
 ├── assets/                     # 정적 파일 디렉토리
+│   ├── constants/              # 정적변수 관리
 │   ├── css/                    # 글로벌/공통 CSS (ex. global.css)
 │   ├── images/                 # 이미지 파일
 │   └── js/                     # JavaScript 파일
@@ -164,10 +165,10 @@ realEstateMachine_front/
   - `types/`: TypeScript 타입 정의 파일 (ex. realEstate.ts)
   - `utils/`: 유틸리티 함수 (ex. commonUtil.tsx)
   - `api/`: API 서비스
-- `assets/`: 정적 파일 디렉토리
-  - `css/`: 스타일시트 파일 (ex. global.css)
-  - `images/`: 이미지 파일
-  - `js/`: JavaScript 파일
+  - `assets/`: 정적 파일 디렉토리
+    - `css/`: 스타일시트 파일 (ex. global.css)
+    - `images/`: 이미지 파일
+    - `js/`: JavaScript 파일
 
 ## 주요 파일 설명
 
