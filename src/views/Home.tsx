@@ -23,7 +23,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=w6mrbajkir';
+    script.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=$API_KEY';
     script.async = true;
     script.onload = () => {
       if (mapRef.current) {
