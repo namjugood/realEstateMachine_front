@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBrowserRouter } from 'react-router-dom'
-import Header from '../header'
+import Header from '../components/layout/Header'
 import PropertyList from '../views/PropertyList'
 import Home from '../views/Home'
 
