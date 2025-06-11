@@ -110,11 +110,12 @@ const PropertyList: React.FC = () => {
         ))}
       </div>
       <div className="property-list">
-        <h2>{viewRegionNm} 매물 목록(총 {aptList.length}건)</h2>
+        
         {aptList.length < 0 && loading && <div>로딩 중...</div>}
         {aptList.length < 0 && error && <div>에러: {error}</div>}
         {aptList.length > 0 && (
           <div>
+            <h2>{viewRegionNm} 매물 목록(총 {aptList.length}건)</h2>
             <button onClick={() => setNumOfRows(50)}>50건씩</button>
             <button onClick={() => setNumOfRows(100)}>100건씩</button>
           
