@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 const Layout: React.FC = () => {
   return (
-    <div className="app">
+    <div className="app min-h-screen">
       <Header />
       <Main />
       <Footer />
@@ -13,4 +13,4 @@ const Layout: React.FC = () => {
   );
 };
 
-export default Layout; 
+export default Layout;
