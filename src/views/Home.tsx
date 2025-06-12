@@ -20,10 +20,11 @@ declare global {
 
 const Home: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null);
+  const API_KEY = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = 'https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=$API_KEY';
+    script.src = `https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=${API_KEY}`;
     script.async = true;
     script.onload = () => {
       if (mapRef.current) {

@@ -1,7 +1,7 @@
 // 지역 목록
 export interface RegionItem {
-  locatadd_nm: string;
-  sido_sgg: string;
+  regionName: string;
+  regionCode: string;
 }
 
 // 거래된 매물 목록
