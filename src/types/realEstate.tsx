@@ -1,7 +1,7 @@
 // 지역 목록
 export interface RegionItem {
-  regionName: string;
-  regionCode: string;
+  admCodeNm: string;
+  admCode: string;
 }
 
 // 거래된 매물 목록

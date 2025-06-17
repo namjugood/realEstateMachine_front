@@ -54,10 +54,7 @@ const PropertyList: React.FC = () => {
   // 거래내역 조회
   const selectRealEstateAptList = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    // 기존 데이터 초기화
-    if(aptList.length > 0) {
-      setAptList([]);
-    }
+
     try {
       setLoading(true);
       if(params.region_code === '' || params.start_deal_ym === '' || params.end_deal_ym === '') {
@@ -71,7 +68,15 @@ const PropertyList: React.FC = () => {
       // 빈 객체({})면 ''로 변경
       const resultItems = checkEmptyItems<AptItem>(items);
       setViewRegionNm(params.region_nm);
+
+      // 기존 데이터 초기화
+      if(aptList.length > 0) {
+        setAptList([]);
+      }
       setAptList(resultItems);
+
+      // 화면 렌더링 후 페이지 번호 초기화
+      setPageNo(1);
     } catch (error) {
       console.error(error);
       setError('데이터 로딩 중 오류');
@@ -92,9 +97,9 @@ const PropertyList: React.FC = () => {
       <div>
         <select defaultValue="" onChange={handleRegionChange}>
           <option value="" disabled>전국</option>
-          {REGIONS.map((region: string) => (
-            <option key={region} value={region}>
-              {region}
+          {REGIONS.map((region: RegionItem) => (
+            <option key={region.admCode} value={region.admCode}>
+              {region.admCodeNm}
             </option>
           ))}
         </select>
@@ -102,13 +107,49 @@ const PropertyList: React.FC = () => {
         <input type="month" placeholder="조회종료" onChange={e => setParams({ ...params, end_deal_ym: e.target.value.replace(/-/g, '') })} />
         <button onClick={selectRealEstateAptList}>조회</button>
       </div>
-      <div>
+      <div className="region-buttons-container">
         {regionList.map((item: RegionItem) => (
-          <button key={item.locatadd_nm} data-region-cd={item.sido_sgg} onClick={() => setParams({ ...params, region_nm: item.locatadd_nm, region_code: item.sido_sgg })}>
-            {item.locatadd_nm}
+          <button 
+            key={item.admCodeNm} 
+            data-region-cd={item.admCode} 
+            onClick={() => setParams({ ...params, region_nm: item.admCodeNm, region_code: item.admCode })}
+            className="region-button"
+          >
+            {item.admCodeNm}
           </button>
         ))}
       </div>
+      <style>
+        {`
+          .region-buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+            padding: 8px;
+          }
+          .region-button {
+            padding: 8px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            background-color: white;
+            color: #333;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          }
+          .region-button:hover {
+            background-color: #f5f5f5;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }
+          .region-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          }
+        `}
+      </style>
       <div className="property-list">
         
         {aptList.length < 0 && loading && <div>로딩 중...</div>}
